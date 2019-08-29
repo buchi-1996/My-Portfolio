@@ -824,7 +824,7 @@ footer p{
         background: #333;
         z-index: 2;
         text-align: center;
-        height: auto;
+        height: 100vh;
         width: 50%;
         right: 0;
         top: 60px;
