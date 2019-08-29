@@ -812,7 +812,7 @@ footer p{
     }
 
     .nav-links li a{
-        color: var(--bg-light);
+        color: #fff;
         padding: 20px;
     }
     
