@@ -65,40 +65,43 @@ header{
 }
 
 .nav-links{
-    display: flex;
-    justify-content:center;
+    text-align: center;
     margin: 0;
 }
-
-nav ul li{
-    color: var(--text-dark);
-    font-weight: bold;
-    text-transform: capitalize;
-    margin-top: 0.6rem;
-    padding: 10px;
+.nav-links li{
+    display: inline-block;
     position: relative;
-   
+    padding: 20px 0;
 }
 
-nav ul li a::after{
-    content: " ";
+.nav-links li a{
+    color: var(--bg-dark);
+    padding: 20px;
+}
+
+.nav-links a:hover{
+    color: var(--secondary-color);
+}
+
+.nav-links a::after{
     display: block;
-    height: 2px;
-    border-top-right-radius: 50px;
-    background: var(--bg-dark);
-    width: 0;
-    transition: all 500ms ease-in-out;
+    content: " ";
+    background: #ccc;
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    bottom: 0;
+    transition: all 350ms ease-in-out;
+    
 }
 
-nav ul li:hover a::after{
+.nav-links a:hover::after{
     width: 100%;
 }
 
-
-
 /* ============ profile section ========== */
 .profile{
-    padding: 150px 0 50px;
+    padding: 100px 0 50px;
 }
 .greetings p{
     color: #fff;
@@ -271,34 +274,38 @@ ul li, .social-links{
     font-weight: bold;
 }
 .navigation-menu ul{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    margin: 0;
+    text-align: center;
 }
 
 .navigation-menu ul li{
+    display: inline-block;
     position: relative;
-    margin: 0;
+    padding: 10px 0;
 }
 
 .navigation-menu ul li a{
-    padding: 0 20px;
-    font-size: 1rem;
-    font-weight: bold;
+    color: var(--text-dark);
+    padding: 20px;
+}
+
+.navigation-menu ul li a:hover{
+    color: var(--primary-color);
 }
 
 .navigation-menu ul li a::after{
-    content: " ";
     display: block;
-    height: 2px;
-    border-top-right-radius: 50px;
-    background: var(--bg-dark);
+    content: " ";
+    background: #aaa;
+    height: 3px;
     width: 0;
-    transition: all 500ms ease-in-out;
+    position: absolute;
+    bottom: 0;
+    transition: all 450ms ease-in-out;
 }
 
- .navigation-menu ul li:hover a::after{
-    width: 100%;
+.navigation-menu ul li a:hover::after{
+    width: 100%
 }
 
 .portfolio .img-box{
@@ -472,8 +479,6 @@ ul li, .social-links{
 .contact-sub p{
     padding: 0 2rem;
     font-size: 0.9rem;
-    font-weight: bold;
-    
 }
 
 /* form card--------------- */
@@ -787,11 +792,16 @@ footer p{
 }
 
 @media screen and (max-width: 768px){
+    header{
+        height: 60px;
+        background: var(--primary-color);
+        border-bottom: 2px solid #444;
+    }
     .harmbugger{
         position: absolute;
         cursor: pointer;
-        top: 8%;
-        right: 50%;
+        top: 25%;
+        right: 4%;
     }
 
     .line{
@@ -801,19 +811,27 @@ footer p{
         margin: 5px;
     }
 
+    .nav-links li a{
+        color: var(--bg-light);
+        padding: 20px;
+    }
+    
+    .nav-links a:hover{
+        color: var(--secondary-color);
+    }
     .nav-links{
-
         position: absolute;
         background: #333;
         z-index: 2;
         text-align: center;
-        height: 100vh;
+        height: auto;
         width: 50%;
         right: 0;
-        top: 0;
+        top: 60px;
         margin: 0;
+        display: flex;
         flex-direction: column;
-        clip-path: circle(100px at 95% -39%);
+        clip-path: circle(100px at 95% -30%);
         -webkit-clip-path: circle(100px at 95% -30%);
         transition: all 1s ease-in-out;
     }
@@ -827,4 +845,53 @@ footer p{
         clip-path: circle(1000px at 95% -30%);
         -webkit-clip-path: circle(1000px at 95% -30%);
     }
+
+    /* profile */
+
+    .profile .row{
+        display: flex;
+        flex-wrap: wrap-reverse;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .profile .greetings {
+        display: flex;
+        justify-content: center;
+    }
+
+    .profile .greetings p{
+        width: 150px;
+        font-size: 20px;
+    }
+
+    /* About */
+
+    .about{
+        text-align: center;
+    }
+
+    /* ====== BLOG SECTION ======= */
+    /* blog-main */
+    .blog-main .related-post{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .blog-comment{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    /* comment form */
+    .comment-form h2{
+        font-size: 25px;
+        font-weight: bolder;
+    }
+
+    /* sidebar */
+
 }
