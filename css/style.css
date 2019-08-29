@@ -811,6 +811,10 @@ footer p{
         margin: 5px;
     }
 
+    .nav-links li{
+        padding: 3px 0;
+        text-align: center;
+    }
     .nav-links li a{
         color: #fff;
         padding: 20px;
@@ -824,26 +828,22 @@ footer p{
         background: #333;
         z-index: 2;
         text-align: center;
-        height: 100vh;
+        height: auto;
         width: 50%;
         right: 0;
         top: 60px;
         margin: 0;
+        padding: 10px 0;
         display: flex;
         flex-direction: column;
-        clip-path: circle(100px at 95% -30%);
-        -webkit-clip-path: circle(100px at 95% -30%);
-        transition: all 1s ease-in-out;
-    }
-
-    .nav-links a{
-        color: #fff;
-        text-align: center;
+        clip-path: circle(100px at 200% -50%);
+        -webkit-clip-path: circle(100px at 200% -50%);
+        transition: all 1.5s ease-in-out;
     }
 
     .nav-links.open{
-        clip-path: circle(1000px at 95% -30%);
-        -webkit-clip-path: circle(1000px at 95% -30%);
+        clip-path: circle(1000px at 95% -100%);
+        -webkit-clip-path: circle(1000px at 95% -100%);
     }
 
     /* profile */
